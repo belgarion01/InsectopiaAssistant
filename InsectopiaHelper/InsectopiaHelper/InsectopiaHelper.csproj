@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Application\Bin.png" />
+    <None Remove="Resources\Application\Blatte_Black.png" />
+    <None Remove="Resources\Application\Blatte_Blue.png" />
+    <None Remove="Resources\Application\Blatte_Downgrade.png" />
+    <None Remove="Resources\Application\Blatte_Green.png" />
+    <None Remove="Resources\Application\Blatte_Multiple.png" />
+    <None Remove="Resources\Application\Blatte_None.png" />
+    <None Remove="Resources\Application\Blatte_Red.png" />
+    <None Remove="Resources\Application\Blatte_Single.png" />
+    <None Remove="Resources\Application\Blatte_Upgrade.png" />
+    <None Remove="Resources\Application\Blatte_White.png" />
+    <None Remove="Resources\Application\InsectopiaCharacter_01.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Application\Bin.png" />
+    <Resource Include="Resources\Application\Blatte_Black.png" />
+    <Resource Include="Resources\Application\Blatte_Blue.png" />
+    <Resource Include="Resources\Application\Blatte_Downgrade.png" />
+    <Resource Include="Resources\Application\Blatte_Green.png" />
+    <Resource Include="Resources\Application\Blatte_Multiple.png" />
+    <Resource Include="Resources\Application\Blatte_None.png" />
+    <Resource Include="Resources\Application\Blatte_Red.png" />
+    <Resource Include="Resources\Application\Blatte_Single.png" />
+    <Resource Include="Resources\Application\Blatte_Upgrade.png" />
+    <Resource Include="Resources\Application\Blatte_White.png" />
+    <Resource Include="Resources\Application\InsectopiaCharacter_01.jpg" />
+  </ItemGroup>
+
+</Project>

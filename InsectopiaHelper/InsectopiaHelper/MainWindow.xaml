@@ -1,0 +1,35 @@
+﻿<Window x:Class="InsectopiaHelper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InsectopiaHelper"
+        mc:Ignorable="d"
+        Title="Insectopia Helper 🐛" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File"/>
+                <MenuItem Header="_Edit"/>
+                <MenuItem Header="_Help"/>
+            </Menu>
+            <TabControl DockPanel.Dock="Left" TabStripPlacement="Left">
+                <TabItem Header="_Overview">
+                    
+                </TabItem>
+                <TabItem Header="_Blatte Roller">
+                    <local:BlatteRollerPanel/>
+                </TabItem>
+                <TabItem Header="_Initiative Roller">
+                    <local:InitiativeRollerView/>
+                </TabItem>
+                <TabItem Header="_Notes"/>
+                <TabItem IsEnabled="False" IsHitTestVisible="False" Visibility="Hidden" Height="40" Header="" Margin="0, 5, 0, 5" Background="DimGray"/>
+                <TabItem Header="Intre Creator">
+                    <local:IntreCreatorPanel/>
+                </TabItem>
+
+            </TabControl>
+        </DockPanel>
+    </Grid>
+</Window>

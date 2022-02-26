@@ -1,0 +1,128 @@
+﻿<UserControl x:Class="InsectopiaHelper.IntreCreatorPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InsectopiaHelper"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <TabControl>
+            <TabItem Header="Character Infos">
+                <ScrollViewer x:Name="svIntrePanel">
+                    <StackPanel Margin="10">
+                        <TextBox  x:Name="tbIntreName" Text="{Binding IntreName}" FontSize="25" Width="200" Height="35" HorizontalAlignment="Left" Margin="0,0,0,15"/>
+                        <Grid x:Name="gIntreCharacterInfos">
+                            <Grid.Style>
+                                <Style>
+                                    <Style.Resources>
+                                        <Style TargetType="local:TextBoxLabel">
+                                            <Setter Property="LabelWidth" Value="80"/>
+                                            <Setter Property="LabelText" Value="Character Infos"/>
+                                            <Setter Property="Margin" Value="0, 0, 0, 5"/>
+                                        </Style>
+                                    </Style.Resources>
+                                </Style>
+                            </Grid.Style>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="180"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <StackPanel Grid.Column="0" Margin="0, 0, 20, 0">
+                                <local:TextBoxLabel LabelText="Species" TextBoxText="{Binding Species, Mode=TwoWay}"/>
+                                <local:TextBoxLabel LabelText="Sub-species" TextBoxText="{Binding Path=Subspecies, Mode=TwoWay}"/>
+                                <local:TextBoxLabel LabelText="Color" TextBoxText="{Binding Path=Color, Mode=TwoWay}"/>
+                                <local:TextBoxLabel LabelText="Diet" TextBoxText="{Binding Path=Diet, Mode=TwoWay}"/>
+                                <local:TextBoxLabel LabelText="Cast" TextBoxText="{Binding Path=Cast, Mode=TwoWay}"/>
+                                <local:TextBoxLabel LabelText="Religion" TextBoxText="{Binding Path=Religion, Mode=TwoWay}"/>
+                                <local:TextBoxLabel LabelText="Alignement" TextBoxText="{Binding Path=Alignement, Mode=TwoWay}"/>
+                                <local:TextBoxLabel LabelText="Title" TextBoxText="{Binding Path=Title, Mode=TwoWay}"/>
+                                <local:TextBoxLabel LabelText="Work" TextBoxText="{Binding Path=Work, Mode=TwoWay}"/>
+                                <local:TextBoxLabel LabelText="Gender" TextBoxText="{Binding Path=Gender, Mode=TwoWay}"/>
+                                <local:TextBoxLabel LabelText="Age" TextBoxText="{Binding Path=Age, Mode=TwoWay}" Margin="0"/>
+                            </StackPanel>
+                            <Image Source="/Resources/Application/InsectopiaCharacter_01.jpg" Grid.Column="1" Stretch="Uniform"/>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Stats">
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.Style>
+                        <Style>
+                            <Style.Resources>
+                                <Style TargetType="local:StatBox">
+                                    <Setter Property="Width" Value="80"/>
+                                    <Setter Property="Height" Value="90 "/>
+                                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                                </Style>
+                            </Style.Resources>
+                        </Style>
+                    </Grid.Style>
+                    <local:StatBox Grid.Column="0" Grid.Row="0" Width="95" Height="105" StatName="Wings" StatValue="{Binding Wings, Mode=TwoWay}"/>
+                    <local:StatBox Grid.Column="1" Grid.Row="0" Width="95" Height="105" StatName="Antenna" StatValue="{Binding Antenna, Mode=TwoWay}"/>
+                    <local:StatBox Grid.Column="2" Grid.Row="0" Width="95" Height="105" StatName="Spirit" StatValue="{Binding Spirit, Mode=TwoWay}"/>
+                    <local:StatBox Grid.Column="3" Grid.Row="0" Width="95" Height="105" StatName="Mandibule" StatValue="{Binding Mandibule, Mode=TwoWay}"/>
+                    <local:StatBox Grid.Column="4" Grid.Row="0" Width="95" Height="105" StatName="Chitine" StatValue="{Binding Chitine, Mode=TwoWay}"/>
+                    <local:StatBox Grid.Column="5" Grid.Row="0" Width="95" Height="105" StatName="Temperature" StatValue="{Binding Temperature, Mode=TwoWay}"/>
+
+                    <local:StatBox Grid.Column="0" Grid.Row="1" StatName="Agility" StatValue="{Binding Agility, Mode=TwoWay}" Margin="0, 10"/>
+                    <local:StatBox Grid.Column="1" Grid.Row="1" StatName="Pheromone" StatValue="{Binding Pheromone, Mode=TwoWay}"/>
+                    <local:StatBox Grid.Column="2" Grid.Row="1" StatName="Instinct" StatValue="{Binding Instinct, Mode=TwoWay}"/>
+                    <local:StatBox Grid.Column="3" Grid.Row="1" StatName="Melee" StatValue="{Binding Melee, Mode=TwoWay}"/>
+                    <local:StatBox Grid.Column="4" Grid.Row="1" StatName="Chrysalid" StatValue="{Binding Chrysalid, Mode=TwoWay}"/>
+                    <local:StatBox Grid.Column="5" Grid.Row="1" StatName="Activity" StatValue="{Binding Activity, Mode=TwoWay}"/>
+
+                    <local:StatBox Grid.Column="0" Grid.Row="2" StatName="Defense" StatValue="{Binding Defense, Mode=TwoWay}"/>
+                    <local:StatBox Grid.Column="1" Grid.Row="2" StatName="Aim" StatValue="{Binding Aim, Mode=TwoWay}"/>
+                    <local:StatBox Grid.Column="2" Grid.Row="2" StatName="Intelligence" StatValue="{Binding Intelligence, Mode=TwoWay}"/>
+                    <local:StatBox Grid.Column="3" Grid.Row="2" StatName="Predator" StatValue="{Binding Predator, Mode=TwoWay}"/>
+                    <local:StatBox Grid.Column="4" Grid.Row="2" StatName="Resistance" StatValue="{Binding Resistance, Mode=TwoWay}"/>
+                    <local:StatBox Grid.Column="5" Grid.Row="2" StatName="Metabolism" StatValue="{Binding Metabolism, Mode=TwoWay}"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Skills">
+                
+            </TabItem>
+        </TabControl>
+        <ScrollViewer Width="200" Grid.Column="1">
+            <StackPanel>
+                <ItemsControl Name="icLoadedIntres">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Content="{Binding IntreName}" Click="btnLoadedCharacter_Click"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Delete" Click="btnDeleteIntre_Click"/>
+                    <Button Content="Save" Click="btnSaveIntre_Click" Grid.Column="1"/>
+                    <Button Content="New Intre" Click="btnNewIntre_Click" Grid.Column="2"/>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

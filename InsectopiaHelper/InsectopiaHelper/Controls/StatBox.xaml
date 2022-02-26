@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="InsectopiaHelper.StatBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InsectopiaHelper"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="100">
+    <GroupBox Header="{Binding Path=StatName, RelativeSource={RelativeSource AncestorType=local:StatBox}}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Background="White" Grid.Row="1">
+                <TextBlock FontFamily="Bold" FontSize="15" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Path=StatValue, RelativeSource={RelativeSource AncestorType=local:StatBox}}"/>
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Button Click="btnUpStat_Click" Content="+"/>
+                <Button Click="btnDownStat_Click" Content="-" Grid.Row="1"/>
+            </Grid>
+        </Grid>
+    </GroupBox>
+</UserControl>

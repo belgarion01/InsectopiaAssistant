@@ -1,0 +1,205 @@
+﻿<UserControl x:Class="InsectopiaHelper.InitiativeRollerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InsectopiaHelper"
+             xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <sys:Double x:Key="ImageSize">45</sys:Double>
+        <sys:Double x:Key="BlatteSize">60</sys:Double>
+    </UserControl.Resources>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Characters Pool" Margin="0, 0, 0, 10">
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <ItemsControl x:Name="icIntrePool">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding IntreName}"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <Button Grid.Column="1" Content="Add" Width="50" Height="30" VerticalAlignment="Center"/>
+            </Grid>
+        </GroupBox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Width="{StaticResource BlatteSize}"
+                   Height="{StaticResource BlatteSize}"
+                   Source="/Resources/Application/Blatte_Red.png"
+                   Margin="0, 0, 10, 0"
+                   VerticalAlignment="Center"/>
+            <ItemsControl x:Name="icRedIntres" Grid.Column="1">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="5, 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{Binding IntreName}" TextAlignment="Center"/>
+                            <Ellipse Height="{StaticResource ImageSize}"
+                                 Width="{StaticResource ImageSize}"
+                                 Fill="Red"
+                                 Grid.Row="1"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Width="{StaticResource BlatteSize}"
+                   Height="{StaticResource BlatteSize}"
+                   Source="/Resources/Application/Blatte_Green.png"
+                   Margin="0, 0, 10, 0"
+                   VerticalAlignment="Center"/>
+            <ItemsControl x:Name="icGreenIntres" Grid.Column="1">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="5, 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{Binding IntreName}" TextAlignment="Center"/>
+                            <Ellipse Height="{StaticResource ImageSize}"
+                                 Width="{StaticResource ImageSize}"
+                                 Fill="Green"
+                                 Grid.Row="1"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Width="{StaticResource BlatteSize}"
+                   Height="{StaticResource BlatteSize}"
+                   Source="/Resources/Application/Blatte_Blue.png"
+                   Margin="0, 0, 10, 0"
+                   VerticalAlignment="Center"/>
+            <ItemsControl x:Name="icBlueIntres" Grid.Column="1">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="5, 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{Binding IntreName}" TextAlignment="Center"/>
+                            <Ellipse Height="{StaticResource ImageSize}"
+                                 Width="{StaticResource ImageSize}"
+                                 Fill="Blue"
+                                 Grid.Row="1"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Width="{StaticResource BlatteSize}"
+                   Height="{StaticResource BlatteSize}"
+                   Source="/Resources/Application/Blatte_White.png"
+                   Margin="0, 0, 10, 0"
+                   VerticalAlignment="Center"/>
+            <ItemsControl x:Name="icWhiteIntres" Grid.Column="1">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="5, 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{Binding IntreName}" TextAlignment="Center"/>
+                            <Ellipse Height="{StaticResource ImageSize}"
+                                 Width="{StaticResource ImageSize}"
+                                 Fill="Gray"
+                                 Grid.Row="1"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Width="{StaticResource BlatteSize}"
+                   Height="{StaticResource BlatteSize}"
+                   Source="/Resources/Application/Blatte_Black.png"
+                   Margin="0, 0, 10, 0"
+                   VerticalAlignment="Center"/>
+            <ItemsControl x:Name="icBlackIntres" Grid.Column="1">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="5, 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{Binding IntreName}" TextAlignment="Center"/>
+                            <Ellipse Height="{StaticResource ImageSize}"
+                                 Width="{StaticResource ImageSize}"
+                                 Fill="Black"
+                                 Grid.Row="1"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+    </Grid>
+</UserControl>
